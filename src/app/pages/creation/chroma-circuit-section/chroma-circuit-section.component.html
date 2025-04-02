@@ -1,0 +1,68 @@
+<app-back-creation-section></app-back-creation-section>
+<div class="bg-gray-800 flex flex-col items-center justify-center">
+  <div
+    class="flex flex-col justify-center items-center w-80 border-b-2 border-gray-700 pb-4 md:w-1/2"
+  >
+    <img src="img/creations/Chroma-Circuit01.svg" class="w-60 rounded-xl" />
+  </div>
+  <div class="flex flex-col items-center justify-center w-80 md:w-1/2">
+    <h1 class="text-3xl text-white mt-4 text-center md:text-4xl">
+      Chroma Circuit: Messenger's Chronicles
+    </h1>
+    <p class="text-gray-200 text-lg mt-5 text-justify mb-3">
+      Chroma Circuit is a 2D platformer game I am currently creating. I am using
+      <a href="https://gamemaker.io/" class="text-fuchsia-500 underline">
+        GameMaker</a
+      >
+      as a game engine and
+      <a href="https://www.aseprite.org" class="text-fuchsia-500 underline">
+        Aseprite</a
+      >
+      for the creation of the characters and the environment.
+    </p>
+    <p class="text-gray-200 text-lg mb-5 text-justify">
+      The main character is called Neon and below is the spritesheet including
+      the different frames of the character.
+    </p>
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <img
+      src="img/creations/Chroma-Circuit03.svg"
+      class="w-80 rounded-xl mb-4 cursor-pointer md:w-1/2"
+      (click)="openModal()"
+    />
+  </div>
+  <div
+    *ngIf="isModalOpen"
+    class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
+  >
+    <div
+      class="bg-gray-800 rounded-lg w-11/12 md:w-1/2 flex flex-col justify-center items-center md:flex-row"
+    >
+      <div class="w-70 p-4 md:w-300">
+        <img
+          src="img/creations/Chroma-Circuit03.svg"
+          class="w-full rounded-lg"
+        />
+      </div>
+      <div class="w-full p-4 flex flex-col justify-center">
+        <h2 class="text-xl mb-4 text-white">Neon character sheet.</h2>
+        <p class="text-white">
+          This character sheet includes frames for: <br />
+          the Idle animation (line 1),<br />
+          the walk animation (line 3),<br />
+          the jump animation (line 4),<br />
+          the attack animation (line 5),<br />
+          the death animation (line 6).<br />
+          There is also alternatives faces for the Idle animation (line 2).
+        </p>
+        <button
+          class="mt-4 bg-fuchsia-500 text-white px-4 py-2 rounded hover:bg-fuchsia-600"
+          (click)="closeModal()"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
